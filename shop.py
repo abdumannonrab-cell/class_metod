@@ -62,36 +62,36 @@ class Shop:
             if item.title == update:
                 yangi=item
                 t = True
-            if t:
-                kod=input(f'1.title\n 2.price\n 3.year\n 4.type\n 5.all')
-                if kod=="1":
-                    new_title= input("new_title:")
-                    yangi.title=new_title
-                    print("o'zgardi")
-                elif kod=="2":
-                    new_price=input("new_price")
-                    yangi.price=new_price
-                    print("o'zgardi")
-                elif kod=="3":
-                    new_year=input("new_year")
-                    yangi.year=new_year
-                    print("o'zgardi")
-                elif kod=="4":
-                    new_type=input("new_type")
-                    yangi.type=new_type
-                    print("o'zgardi")
-                else:
-                    new_title = input("new_title:")
-                    new_price = input("new_price")
-                    new_year = input("new_year")
-                    new_type = input("new_type")
-                    yangi.title = new_title
-                    yangi.price = new_price
-                    yangi.year = new_year
-                    yangi.type = new_type
-                    print("o'zgardi")
+        if t:
+            kod=input(f'1.title\n 2.price\n 3.year\n 4.type\n 5.all')
+            if kod=="1":
+                new_title= input("new_title:")
+                yangi.title=new_title
+                print("o'zgardi")
+            elif kod=="2":
+                new_price=input("new_price")
+                yangi.price=new_price
+                print("o'zgardi")
+            elif kod=="3":
+                new_year=input("new_year")
+                yangi.year=new_year
+                print("o'zgardi")
+            elif kod=="4":
+                new_type=input("new_type")
+                yangi.type=new_type
+                print("o'zgardi")
             else:
-                print('topilmadi')
+                new_title = input("new_title:")
+                new_price = input("new_price")
+                new_year = input("new_year")
+                new_type = input("new_type")
+                yangi.title = new_title
+                yangi.price = new_price
+                yangi.year = new_year
+                yangi.type = new_type
+                print("o'zgardi")
+        else:
+            print('topilmadi')
     def view_all(self):
         for item in self.baza:
             print(f'title:{item.title} price:{item.price} year:{item.year} type:{item.type}')
